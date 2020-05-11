@@ -10,7 +10,7 @@ export class RegionService {
 
   constructor(private http: HttpClient) { }
 
-  getCountriesByRegion(region: String): Observable<any> {
+  getCountriesByRegion(region: string): Observable<any> {
     return this.http.get<Region>(`/api/region/${region}`);
   }
 }
