@@ -3,12 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
-import { DetailsComponent } from './details/details.component';
+import { CountryDetailsComponent } from './components/country-details/country-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DetailsComponent
+    CountryDetailsComponent
   ],
   imports: [
     BrowserModule,
