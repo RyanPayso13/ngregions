@@ -3,8 +3,8 @@ import { initialRegionState } from './region.state';
 import { initialCountryState } from './country.state';
 
 export const initialAppState: AppState = {
-  regions: initialRegionState,
-  countries: initialCountryState
+  region: initialRegionState,
+  country: initialCountryState
 }
 
 export function getInitialState(): AppState {

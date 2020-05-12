@@ -1,6 +1,6 @@
 {
   "/api/*": {
-      "target": "https://restcountries.eu/rest/v2/",
+      "target": "https://restcountries.eu/rest/v2/region/",
       "secure": true,
       "logLevel": "debug",
       "changeOrigin": true

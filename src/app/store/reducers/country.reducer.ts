@@ -4,9 +4,9 @@ import { initialCountryState } from '../state/country.state';
 
 const countryReducer = createReducer(
   initialCountryState,
-    on(CountryActions.setSelectedCountry, (state, { country }) => ({
-      selectedCountry: country
-    }))
+    on(CountryActions.setCountries, (state, { payload }) => ({ ...state, countries: [...payload] })),
+    on(CountryActions.setSelectedCountry, (state, { payload } ) => ({ ...state, selectedCountry: payload }))
+
 );
 
 export function reducer(state = initialCountryState, action: Action) {

@@ -1,4 +1,3 @@
 export interface RegionState {
-  regions: Array<string>,
-  selectedRegion: string
+  regions: Array<string>
 }

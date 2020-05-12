@@ -1,10 +1,10 @@
 import { createAction, props } from '@ngrx/store';
 
 export enum RegionActions {
-  SetSelectedRegion = '[Region] Set Selected Region'
+  GetCountriesByRegion = '[Region] Get Countries By Region'
 }
 
-export const setSelectedRegion = createAction(
-  RegionActions.SetSelectedRegion,
-  props<{region: string}>()
+export const getCountriesByRegion = createAction(
+  RegionActions.GetCountriesByRegion,
+  props<{payload: string}>()
 );

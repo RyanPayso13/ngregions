@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideMockStore, MockStore } from '@ngrx/store/testing';
-import { initialAppState } from '../../../../store/state/app.state';
+import { initialAppState } from '../../../store/state/app.state';
 import { DetailsContainerComponent } from './details-container.component';
 import { DetailsUiComponent } from '../details-ui/details-ui.component';
 
