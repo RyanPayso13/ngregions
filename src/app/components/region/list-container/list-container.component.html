@@ -1,1 +1,5 @@
-<app-list-select [options]="regions$ | async" (changed)="onChanged($event)"></app-list-select>
+<app-list-select
+  label="Region"
+  [options]="regions$ | async"
+  (changed)="onChanged($event)">
+</app-list-select>

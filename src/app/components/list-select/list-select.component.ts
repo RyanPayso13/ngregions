@@ -11,6 +11,8 @@ export class ListSelectComponent implements OnInit {
 
   @Input()
   options: Array<string> = [];
+  @Input()
+  label: string = '';
 
   @Output() changed = new EventEmitter<string>();
 
