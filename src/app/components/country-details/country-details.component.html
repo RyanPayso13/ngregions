@@ -10,11 +10,23 @@
   </thead>
   <tbody>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>{{ country.name }}</td>
+      <td>{{ country.capital }}</td>
+      <td>{{ country.population }}</td>
+      <td>
+        <div *ngFor="let currency of country.currencies">
+          <ul>
+            <li *ngFor="let item of currency | keyvalue">{{item.key}}: {{item.value}}</li>
+          </ul>
+        </div>
+      </td>
+      <td>
+        <img
+          src="{{ country.flag }}"
+          alt="{{ country.name }} flag"
+          width="100"
+          height="50" />
+        </td>
     </tr>
   </tbody>
 </table>
