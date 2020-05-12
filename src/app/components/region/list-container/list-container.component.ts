@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { Region } from 'src/models/region.model';
 import { Store, select } from '@ngrx/store';
 import { getCountriesByRegion } from 'src/app/store/actions/region.actions';
+import { resetCountries } from 'src/app/store/actions/country.actions';
 
 @Component({
   selector: 'app-region-list-container',
@@ -21,6 +22,6 @@ export class ListContainerComponent implements OnInit {
   }
 
   onChanged(value: string): void {
-    this.store.dispatch(getCountriesByRegion({ payload: value }))
+    this.store.dispatch(value !== '' ? getCountriesByRegion({ payload: value }) : resetCountries());
   }
 }

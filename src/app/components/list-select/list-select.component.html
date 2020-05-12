@@ -1,4 +1,4 @@
 <select (change)="onChange($event.target.value)" [disabled]="options.length === 0">
-  <option selected>Select...</option>
+  <option selected value="">Select...</option>
   <option *ngFor="let option of options">{{ option }}</option>
 </select>
