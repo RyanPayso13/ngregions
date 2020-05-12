@@ -10,7 +10,7 @@ export interface Country {
   alpha3Code: string,
   callingCodes: Array<string>,
   capital: string,
-  altSpelling: Array<string>,
+  altSpellings: Array<string>,
   region: string,
   subregion: string,
   population: number,
@@ -24,7 +24,7 @@ export interface Country {
   numericCode: string,
   currencies: Array<Currency>
   languages: Array<Language>,
-  translations: Array<Translation>
+  translations: Translation,
   flag: string,
   regionalBlocs: Array<Bloc>,
   cioc: string

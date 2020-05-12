@@ -1,23 +1,23 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { CountryDetailsComponent } from './country-details.component';
+import { DetailsUiComponent } from './details-ui.component';
 import { DebugElement } from '@angular/core';
 import { By } from "@angular/platform-browser";
 
-describe('CountryDetailsComponent', () => {
-  let component: CountryDetailsComponent;
-  let fixture: ComponentFixture<CountryDetailsComponent>;
+xdescribe('CountryDetailsComponent', () => {
+  let component: DetailsUiComponent;
+  let fixture: ComponentFixture<DetailsUiComponent>;
   let el: DebugElement;
   let cells: any;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CountryDetailsComponent ]
+      declarations: [ DetailsUiComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CountryDetailsComponent);
+    fixture = TestBed.createComponent(DetailsUiComponent);
     component = fixture.componentInstance;
     component.country = {"name":"Belgium","topLevelDomain":[".be"],"alpha2Code":"BE","alpha3Code":"BEL","callingCodes":["32"],"capital":"Brussels","altSpellings":["BE","België","Belgie","Belgien","Belgique","Kingdom of Belgium","Koninkrijk België","Royaume de Belgique","Königreich Belgien"],"region":"Europe","subregion":"Western Europe","population":11319511,"latlng":[50.83333333,4.0],"demonym":"Belgian","area":30528.0,"gini":33.0,"timezones":["UTC+01:00"],"borders":["FRA","DEU","LUX","NLD"],"nativeName":"België","numericCode":"056","currencies":[{"code":"EUR","name":"Euro","symbol":"€"}],"languages":[{"iso639_1":"nl","iso639_2":"nld","name":"Dutch","nativeName":"Nederlands"},{"iso639_1":"fr","iso639_2":"fra","name":"French","nativeName":"français"},{"iso639_1":"de","iso639_2":"deu","name":"German","nativeName":"Deutsch"}],"translations":{"de":"Belgien","es":"Bélgica","fr":"Belgique","ja":"ベルギー","it":"Belgio","br":"Bélgica","pt":"Bélgica","nl":"België","hr":"Belgija","fa":"بلژیک"},"flag":"https://restcountries.eu/data/bel.svg","regionalBlocs":[{"acronym":"EU","name":"European Union","otherAcronyms":[],"otherNames":[]}],"cioc":"BEL"};
     fixture.detectChanges();
@@ -66,10 +66,10 @@ describe('CountryDetailsComponent', () => {
   });
 
   it('should render the country flag', () => {
-    let flag = fixture.debugElement.query(By.css('img'));
-    expect(flag).toBeDefined();
-    expect(flag.nativeElement.src).toBe('https://restcountries.eu/data/bel.svg');
-    expect(flag.nativeElement.alt).toBe('Belgium flag');
+    el = fixture.debugElement.query(By.css('img'));
+    expect(el).toBeDefined();
+    expect(el.nativeElement.src).toBe('https://restcountries.eu/data/bel.svg');
+    expect(el.nativeElement.alt).toBe('Belgium flag');
   });
 
 });
