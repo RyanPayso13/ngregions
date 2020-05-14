@@ -1,8 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ListSelectComponent } from './list-select.component';
 
-describe('ListSelectComponent', () => {
+fdescribe('ListSelectComponent', () => {
   let component: ListSelectComponent;
   let fixture: ComponentFixture<ListSelectComponent>;
 

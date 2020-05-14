@@ -10,7 +10,7 @@ import * as selectors from '../../../store/selectors/region.selector';
   templateUrl: './list-container.component.html',
   styleUrls: ['./list-container.component.scss']
 })
-export class ListContainerComponent implements OnInit {
+export class RegionListContainerComponent implements OnInit {
   regions$: Observable<Array<string>>
 
   constructor(

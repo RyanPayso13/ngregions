@@ -5,7 +5,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   templateUrl: './list-select.component.html',
   styleUrls: ['./list-select.component.scss']
 })
-export class ListSelectComponent implements OnInit {
+export class ListSelectComponent {
 
   constructor() { }
 
@@ -15,9 +15,6 @@ export class ListSelectComponent implements OnInit {
   label: string = '';
 
   @Output() changed = new EventEmitter<string>();
-
-  ngOnInit(): void {
-  }
 
   onChange(option: string): void {
     this.changed.emit(option);

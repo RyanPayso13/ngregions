@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CountryListContainerComponent } from './list-container.component';
+import { RegionListContainerComponent } from './list-container.component';
 
 describe('ListContainerComponent', () => {
-  let component: CountryListContainerComponent;
-  let fixture: ComponentFixture<CountryListContainerComponent>;
+  let component: RegionListContainerComponent;
+  let fixture: ComponentFixture<RegionListContainerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CountryListContainerComponent ]
+      declarations: [ RegionListContainerComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CountryListContainerComponent);
+    fixture = TestBed.createComponent(RegionListContainerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
