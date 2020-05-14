@@ -12,7 +12,7 @@ import { RegionEffects } from './store/effects/region.effects';
 
 import { DetailsContainerComponent } from './components/country/details-container/details-container.component';
 import { DetailsUiComponent } from './components/country/details-ui/details-ui.component';
-import { ListContainerComponent } from './components/region/list-container/list-container.component';
+import { RegionListContainerComponent } from './components/region/list-container/list-container.component';
 import { CountryListContainerComponent } from './components/country/list-container/list-container.component';
 import { ListSelectComponent } from './components/list-select/list-select.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -23,7 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     DetailsContainerComponent,
     DetailsUiComponent,
-    ListContainerComponent,
+    RegionListContainerComponent,
     ListSelectComponent,
     CountryListContainerComponent
   ],
