@@ -1,16 +1,25 @@
 import { TestBed, async } from '@angular/core/testing';
+import { provideMockStore, MockStore } from '@ngrx/store/testing';
 import { AppComponent } from './app.component';
+
 import { DetailsContainerComponent } from './components/country/details-container/details-container.component';
 import { DetailsUiComponent } from './components/country/details-ui/details-ui.component';
+import { RegionListContainerComponent } from './components/region/list-container/list-container.component';
+import { CountryListContainerComponent } from './components/country/list-container/list-container.component';
+import { ListSelectComponent } from './components/list-select/list-select.component';
 
-xdescribe('AppComponent', () => {
+describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
+        DetailsContainerComponent,
         DetailsUiComponent,
-        DetailsContainerComponent
+        RegionListContainerComponent,
+        ListSelectComponent,
+        CountryListContainerComponent
       ],
+      providers: [ provideMockStore() ]
     }).compileComponents();
   }));
 

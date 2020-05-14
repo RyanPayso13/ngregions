@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
@@ -15,7 +16,6 @@ import { DetailsUiComponent } from './components/country/details-ui/details-ui.c
 import { RegionListContainerComponent } from './components/region/list-container/list-container.component';
 import { CountryListContainerComponent } from './components/country/list-container/list-container.component';
 import { ListSelectComponent } from './components/list-select/list-select.component';
-import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
