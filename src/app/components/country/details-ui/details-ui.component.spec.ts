@@ -3,7 +3,7 @@ import { DetailsUiComponent } from './details-ui.component';
 import { DebugElement } from '@angular/core';
 import { By } from "@angular/platform-browser";
 
-xdescribe('CountryDetailsComponent', () => {
+describe('CountryDetailsComponent', () => {
   let component: DetailsUiComponent;
   let fixture: ComponentFixture<DetailsUiComponent>;
   let el: DebugElement;

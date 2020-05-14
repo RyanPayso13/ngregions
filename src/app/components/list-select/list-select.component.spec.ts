@@ -3,7 +3,7 @@ import { DebugElement } from '@angular/core';
 import { By } from "@angular/platform-browser";
 import { ListSelectComponent } from './list-select.component';
 
-fdescribe('ListSelectComponent', () => {
+describe('ListSelectComponent', () => {
   let component: ListSelectComponent;
   let fixture: ComponentFixture<ListSelectComponent>;
 

@@ -17,4 +17,4 @@ export const setSelectedCountry = createAction(
   props<{payload: Country}>()
 );
 
-export const resetCountries  = createAction(CountryActions.ResetCountries);
+export const resetCountries = createAction(CountryActions.ResetCountries);

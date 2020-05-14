@@ -6,7 +6,7 @@ import { Region } from '../../models/region.model';
 describe('RegionService', () => {
   let service: RegionService;
   let httpTestingController: HttpTestingController;
-  const mockRegion: Region = require('../../assets/mock-data/europe.json');;
+  const mockRegion: Region = require('../../assets/mock-data/europe.json');
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -26,10 +26,10 @@ describe('RegionService', () => {
   });
 
   it('should fetch the countries by region', () => {
-    service.getCountriesByRegion('europe').subscribe(region => expect(region).toEqual(mockRegion));
+    service.getCountriesByRegion({ payload: 'europe' }).subscribe(region => expect(region).toEqual(mockRegion));
     httpTestingController.expectOne({
       method: 'GET',
-      url: `/api/region/europe`
+      url: `https://restcountries.eu/rest/v2/region/europe`
     }).flush(mockRegion);
   });
 });

@@ -6,7 +6,7 @@ const countryReducer = createReducer(
   initialCountryState,
     on(CountryActions.setCountries, (state, { payload }) => ({ ...state, countries: [...payload] })),
     on(CountryActions.setSelectedCountry, (state, { payload } ) => ({ ...state, selectedCountry: payload })),
-    on(CountryActions.resetCountries, (state) => ({ ...state, countries: [] }))
+    on(CountryActions.resetCountries, (state) => (initialCountryState))
 );
 
 export function reducer(state = initialCountryState, action: Action) {
