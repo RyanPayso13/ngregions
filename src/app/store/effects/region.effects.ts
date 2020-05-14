@@ -9,6 +9,11 @@ import { CountryActions } from '../actions/country.actions';
 @Injectable()
 export class RegionEffects {
 
+  constructor(
+    private actions$: Actions,
+    private regionService: RegionService
+  ) {}
+
   loadCountriesByRegion$ = createEffect((region: string = '') => this.actions$.pipe(
     ofType(RegionActions.GetCountriesByRegion),
     switchMap((action) => this.regionService.getCountriesByRegion(action)
@@ -19,8 +24,4 @@ export class RegionEffects {
     )
   );
 
-  constructor(
-    private actions$: Actions,
-    private regionService: RegionService
-  ) {}
 }
