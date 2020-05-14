@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Region } from 'src/models/region.model';
 import { Store, select } from '@ngrx/store';
 import * as selectors from '../../../store/selectors/country.selector';
 import { setSelectedCountry } from 'src/app/store/actions/country.actions';
-import { Country } from 'src/models/country.model';
 
 @Component({
   selector: 'app-country-list-container',

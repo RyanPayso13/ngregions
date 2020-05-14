@@ -6,7 +6,3 @@ export const initialAppState: AppState = {
   region: initialRegionState,
   country: initialCountryState
 }
-
-export function getInitialState(): AppState {
-  return initialAppState;
-}

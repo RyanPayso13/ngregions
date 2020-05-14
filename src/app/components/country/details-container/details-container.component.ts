@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Country } from 'src/models/country.model';
 import { Store, select } from '@ngrx/store';
+import * as selectors from '../../../store/selectors/country.selector';
 
 @Component({
   selector: 'app-details-container',
@@ -16,7 +17,7 @@ export class DetailsContainerComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.country$ = this.store.pipe(select(state => state.country.selectedCountry));
+    this.country$ = this.store.pipe(select(selectors.selectCountry));
   }
 
 }

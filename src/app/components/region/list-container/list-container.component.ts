@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Region } from 'src/models/region.model';
 import { Store, select } from '@ngrx/store';
 import { getCountriesByRegion } from 'src/app/store/actions/region.actions';
 import { resetCountries } from 'src/app/store/actions/country.actions';
+import * as selectors from '../../../store/selectors/region.selector';
 
 @Component({
   selector: 'app-region-list-container',
@@ -11,14 +11,14 @@ import { resetCountries } from 'src/app/store/actions/country.actions';
   styleUrls: ['./list-container.component.scss']
 })
 export class ListContainerComponent implements OnInit {
-  regions$: Observable<Region>
+  regions$: Observable<Array<string>>
 
   constructor(
     private store: Store<any>
   ) { }
 
   ngOnInit(): void {
-    this.regions$ = this.store.pipe(select(state => state.region.regions));
+    this.regions$ = this.store.pipe(select(selectors.selectAllRegions));
   }
 
   onChanged(value: string): void {
